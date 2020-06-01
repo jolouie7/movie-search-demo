@@ -1,11 +1,20 @@
-import React from 'react'
+import React from 'react';
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Container, Row } from "react-bootstrap";
 
 function HeaderCompoent() {
   return (
     <div>
-      <h1>Header</h1>
+      <Container fluid>
+        <Row
+          className="justify-content-md-center py-3"
+          style={{ background: "grey" }}
+        >
+          <h1>Header</h1>
+        </Row>
+      </Container>
     </div>
-  )
+  );
 }
 
 export default HeaderCompoent

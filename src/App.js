@@ -21,7 +21,7 @@ function App() {
       <HeaderCompoent />
       <SearchComponent />
       <SubTitleComponent />
-      <MovieCardComponent />
+      <MovieCardComponent movies={movies}/>
     </div>
   );
 }
