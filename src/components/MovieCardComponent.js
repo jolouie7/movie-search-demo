@@ -4,14 +4,14 @@ import Card from "react-bootstrap/Card";
 
 function MovieCardComponent({movie, index}) {
   return (
-    <div>
-      <Container fluid>
-        <Row>
-          <Card.Title>{movie.Title}</Card.Title>
-          <Card.Img src={movie.Poster} key={index} />
-        </Row>
-      </Container>
-    </div>
+    <>
+      <Card.Title>{movie.Title}</Card.Title>
+      <Card.Img
+        src={movie.Poster}
+        key={index}
+        // style={{ height: "auto", maxWidth: "50%" }}
+      />
+    </>
   );
 }
 

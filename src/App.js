@@ -12,9 +12,14 @@ function App() {
   const [errorMessage, setErrorMessage] = useState(null)
 
   useEffect(() => {
-    fetch(`${process.env.REACT_APP_MOVIE_URL}`)
+    fetch(
+      `http://www.omdbapi.com/?s=man&apikey=${process.env.REACT_APP_API_KEY}`
+    )
       .then((res) => res.json())
-      .then((data) => setMovies(data));
+      .then((data) => {
+        setMovies(data);
+        setLoading(false);
+      });
   }, [])
 
   //callback to search for movies

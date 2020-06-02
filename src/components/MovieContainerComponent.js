@@ -8,27 +8,23 @@ function MovieCcontainerComponent(props) {
   console.log(movies.Search)
 
   return (
-    <div>
+    <>
       <Container>
-        <Row>
-          <div>
-            {loading && !errorMessage ? (
-              <span>Loading...</span>
-            ) : errorMessage ? (
-              <div>"Error:" + {errorMessage}</div>
-            ) : (
-              movies.Search.map((movie, index) => {
-                return (
-                  <MovieCardComponent movie={movie} index={index} />
-                  // <CardImg src={movie.Search.Poster} key={index} />
-                );
-              })
-            )}
-            {/* <CardImg src={movies.Search.Poster} /> */}
-          </div>
-        </Row>
+        {loading && !errorMessage ? (
+          <span>Loading...</span>
+          ) : errorMessage ? (
+            <div>{errorMessage}</div>
+        ) : (
+          <Row xs={3}>
+          {movies.Search.map((movie, index) => (
+            <Col>
+              <MovieCardComponent movie={movie} index={index} />
+            </Col>
+          ))}
+          </Row>
+        )}
       </Container>
-    </div>
+    </>
   );
 }
 
