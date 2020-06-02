@@ -1,15 +1,14 @@
 import React from 'react'
-import "bootstrap/dist/css/bootstrap.min.css";
-import { Container, Row, Col, CardImg } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
+import Card from "react-bootstrap/Card";
 
-function MovieCardComponent(props) {
-  const { movies } = props;
-
+function MovieCardComponent({movie, index}) {
   return (
     <div>
-      <Container>
+      <Container fluid>
         <Row>
-          <CardImg src={movies.Poster} />
+          <Card.Title>{movie.Title}</Card.Title>
+          <Card.Img src={movie.Poster} key={index} />
         </Row>
       </Container>
     </div>
