@@ -3,7 +3,7 @@ import './App.css';
 import HeaderCompoent from './components/HeaderCompoent';
 import SearchComponent from './components/SearchComponent';
 import SubTitleComponent from './components/SubTitleComponent';
-import MovieCardComponent from './components/MovieContainerComponent';
+import MovieContainerComponent from './components/MovieContainerComponent';
 
 
 function App() {
@@ -43,7 +43,7 @@ function App() {
       <HeaderCompoent />
       <SearchComponent search={search} />
       <SubTitleComponent />
-      <MovieCardComponent movies={movies} loading={loading} errorMessage={errorMessage}/>
+      <MovieContainerComponent movies={movies} loading={loading} errorMessage={errorMessage}/>
     </div>
   );
 }

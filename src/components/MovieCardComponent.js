@@ -16,3 +16,4 @@ function MovieCardComponent({movie, index}) {
 }
 
 export default MovieCardComponent
+// TODO: Fix the cards so they line up next to each other. Group of 3 (Probably want to make the images smaller)

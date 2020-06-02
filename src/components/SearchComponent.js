@@ -14,12 +14,19 @@ function SearchComponent({ search }) {
     <div>
       <InputGroup className="mb-3">
         <FormControl
-          onChange={e => {setSearchTerm(e.target.value)}}
+          onChange={(e) => {
+            setSearchTerm(e.target.value);
+          }}
           value={searchTerm}
           placeholder="Search Movie"
         />
         <InputGroup.Append>
-          <Button onClick={onClickHandler} variant="outline-secondary">SEARCH</Button>
+          <Button
+            onClick={() => {onClickHandler(searchTerm)}}
+            variant="outline-secondary"
+          >
+            SEARCH
+          </Button>
         </InputGroup.Append>
       </InputGroup>
     </div>
@@ -27,5 +34,3 @@ function SearchComponent({ search }) {
 }
 
 export default SearchComponent
-
-// TODO: Work on search feature
